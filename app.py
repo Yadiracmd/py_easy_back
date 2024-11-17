@@ -1,11 +1,12 @@
 from flask import Flask
 
 from application.exception.GlobalException import register_error_handlers
+from application.filter.requestFilter import register_filter
 from exts import db
 from flask_migrate import Migrate
 from application import blueprints
 from application import settings
-from application.filter.requestFilter import register_filter
+
 
 app = Flask(__name__)
 # 绑定配置文件
@@ -23,7 +24,7 @@ for blueprint in blueprints:
     app.register_blueprint(blueprint)
 
 # 注册异常处理器
-#register_filter(app)
+register_filter(app)
 
 # 注册异常处理器
 register_error_handlers(app)

@@ -5,7 +5,8 @@ Content-Type: application/json
 {
   "username": "yadira",
   "password": "123456",
-  "password_confirm": "123456"
+  "password_confirm": "123456",
+  "gender": "男"
 }
 
 
@@ -22,7 +23,20 @@ Content-Type: application/json
     client.global.set("Token",response.body.data.Token)
 %}
 
+### 获取余额
+GET http://localhost:5000/auth/balance
+Content-Type: application/json
+Token:{{Token}}
 
+
+### 测试付钱接口
+POST http://localhost:5000/jd/h5st
+Content-Type: application/json
+Token:{{Token}}
+
+{
+  "username": "122"
+}
 
 
 

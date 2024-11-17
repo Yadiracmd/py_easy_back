@@ -1,8 +1,8 @@
+flask~=3.0.3
+flask-migrate~=4.0.7
+alembic~=1.14.0
+sqlalchemy~=2.0.36
 pycryptodome~=3.21.0
 pyjwt~=2.9.0
-flask~=3.0.3
 wtforms~=3.2.1
-sqlalchemy~=2.0.36
-flask-migrate~=4.0.7
 marshmallow~=3.23.1
-alembic~=1.14.0

@@ -7,7 +7,7 @@ USERNAME = 'root'
 # 密码
 PASSWORD = '123456'
 # 数据库名
-DATABASE = "partysystem"
+DATABASE = "py_easy"
 
 # 配置数据库URI
 SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{USERNAME}:{PASSWORD}@{HOSTNAME}/{DATABASE}?charset=utf8'
