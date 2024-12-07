@@ -30,7 +30,7 @@ Token:{{Token}}
 
 
 ### 测试付钱接口
-POST http://localhost:5000/jd/h5st
+GET http://localhost:5000/jd/h5st
 Content-Type: application/json
 Token:{{Token}}
 

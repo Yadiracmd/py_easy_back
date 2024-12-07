@@ -32,8 +32,8 @@ def register_filter(app):
         #         return Response.fail("请求数据格式不正确", code=401)
 
         if request.endpoint not in ['auth.auth_login', 'auth.get_email_captcha', 'auth.auth_register']:
-            token = request.headers.get('Token')
-
+            token = request.args.get('token')
+            print(token)
             # 如果没有 Token，返回鉴权失败
             if not token:
                 return Response.fail("鉴权失败", code=403)

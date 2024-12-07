@@ -1,26 +1,17 @@
 from flask import Blueprint, request
-from sqlalchemy.exc import SQLAlchemyError
-from application.models import ConsumptionModel, UserModel
-from application.schema import UserSchema
 from application.utils.ResponseEntity import Response
-
-from flask import g
-
 from application.utils.decorators import charge_user
-from exts import db
-
-bp = Blueprint("jd", __name__, url_prefix='/jd')
 
 
+bp = Blueprint("jd", __name__, url_prefix='/yd')
 
 
-
-@bp.route("/h5st",methods=["POST"])
-@charge_user(payCost=100)
+@bp.route("/h5st",methods=["GET"])
+@charge_user(payCost=30)
 def get_json_data(data):
     if data:
         return Response.success("调用成功")
-    return Response.fail("余额不足")
+    return Response.fail("余额不足,请联系微信：jzx2968496291")
 
 
 
